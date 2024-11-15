@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_92d6d3f55d0d14a9ad3abaf78ff84c86 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_92d6d3f55d0d14a9ad3abaf78ff84c86" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_92d6d3f55d0d14a9ad3abaf78ff84c86 = L.map(
+                "map_92d6d3f55d0d14a9ad3abaf78ff84c86",
+                {
+                    center: [35.8617, 104.1954],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_35ff4a2fe26c5168a99b6bf267efbbbb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_35ff4a2fe26c5168a99b6bf267efbbbb.addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var marker_9e0d69ecfa693e05bda1e171fe17a6f8 = L.marker(
+                [32.0603, 118.7969],
+                {}
+            ).addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var icon_f9cdd073e4eaa8477f08f3a338d94c92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9e0d69ecfa693e05bda1e171fe17a6f8.setIcon(icon_f9cdd073e4eaa8477f08f3a338d94c92);
+        
+    
+        var popup_436853bc9003bf7899f84f5b3b21a260 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f31e653ded81d769cb384be7aa63f34 = $(`<div id="html_7f31e653ded81d769cb384be7aa63f34" style="width: 100.0%; height: 100.0%;">南京 (Nanjing): 15 次</div>`)[0];
+                popup_436853bc9003bf7899f84f5b3b21a260.setContent(html_7f31e653ded81d769cb384be7aa63f34);
+            
+        
+
+        marker_9e0d69ecfa693e05bda1e171fe17a6f8.bindPopup(popup_436853bc9003bf7899f84f5b3b21a260)
+        ;
+
+        
+    
+    
+            marker_9e0d69ecfa693e05bda1e171fe17a6f8.bindTooltip(
+                `<div>
+                     南京 (Nanjing) (15 次)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_416820fe52489a1027cbfc58ccaa40ee = L.marker(
+                [39.9042, 116.4074],
+                {}
+            ).addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var icon_979a3dcabc4de9e4e3d3f9a400f7c2d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_416820fe52489a1027cbfc58ccaa40ee.setIcon(icon_979a3dcabc4de9e4e3d3f9a400f7c2d9);
+        
+    
+        var popup_e52af9c11243fda03e3fb22918e5b62c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1d881966be7a0393f9b8515e4b5a7b7 = $(`<div id="html_e1d881966be7a0393f9b8515e4b5a7b7" style="width: 100.0%; height: 100.0%;">北京 (Beijing): 4 次</div>`)[0];
+                popup_e52af9c11243fda03e3fb22918e5b62c.setContent(html_e1d881966be7a0393f9b8515e4b5a7b7);
+            
+        
+
+        marker_416820fe52489a1027cbfc58ccaa40ee.bindPopup(popup_e52af9c11243fda03e3fb22918e5b62c)
+        ;
+
+        
+    
+    
+            marker_416820fe52489a1027cbfc58ccaa40ee.bindTooltip(
+                `<div>
+                     北京 (Beijing) (4 次)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af3e07aeb3d048290fd12545a6230ee3 = L.marker(
+                [32.3932, 119.4127],
+                {}
+            ).addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var icon_e52beaccd50e1ae02d7c02e7df0ba54a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_af3e07aeb3d048290fd12545a6230ee3.setIcon(icon_e52beaccd50e1ae02d7c02e7df0ba54a);
+        
+    
+        var popup_d4e5e2052841ec79916399a77dcf30c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3ab23ca3a6a4c6497131648ca0846c2 = $(`<div id="html_b3ab23ca3a6a4c6497131648ca0846c2" style="width: 100.0%; height: 100.0%;">扬州 (Yangzhou): 5 次</div>`)[0];
+                popup_d4e5e2052841ec79916399a77dcf30c1.setContent(html_b3ab23ca3a6a4c6497131648ca0846c2);
+            
+        
+
+        marker_af3e07aeb3d048290fd12545a6230ee3.bindPopup(popup_d4e5e2052841ec79916399a77dcf30c1)
+        ;
+
+        
+    
+    
+            marker_af3e07aeb3d048290fd12545a6230ee3.bindTooltip(
+                `<div>
+                     扬州 (Yangzhou) (5 次)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_caa920d06f480bf93b182111f169627e = L.marker(
+                [30.2741, 120.1551],
+                {}
+            ).addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var icon_06bf5d79efb88715bc8ba963854fee9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_caa920d06f480bf93b182111f169627e.setIcon(icon_06bf5d79efb88715bc8ba963854fee9b);
+        
+    
+        var popup_5db2d86a8679a3b51aa784dc58a0a5bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b48cd0e20e5e9522ce3ab3d331d5ddf1 = $(`<div id="html_b48cd0e20e5e9522ce3ab3d331d5ddf1" style="width: 100.0%; height: 100.0%;">杭州 (Hangzhou): 1 次</div>`)[0];
+                popup_5db2d86a8679a3b51aa784dc58a0a5bb.setContent(html_b48cd0e20e5e9522ce3ab3d331d5ddf1);
+            
+        
+
+        marker_caa920d06f480bf93b182111f169627e.bindPopup(popup_5db2d86a8679a3b51aa784dc58a0a5bb)
+        ;
+
+        
+    
+    
+            marker_caa920d06f480bf93b182111f169627e.bindTooltip(
+                `<div>
+                     杭州 (Hangzhou) (1 次)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8eda8f582e03b4b77058dbfdf46c0ea7 = L.marker(
+                [31.2989, 120.5853],
+                {}
+            ).addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var icon_9aec4b44e3518a414ffe472be25b14fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8eda8f582e03b4b77058dbfdf46c0ea7.setIcon(icon_9aec4b44e3518a414ffe472be25b14fc);
+        
+    
+        var popup_3b8f8fc9ed98c25d0355e6ac3f16ca9c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ad2badc442fa1c1835ceba89ba90992 = $(`<div id="html_5ad2badc442fa1c1835ceba89ba90992" style="width: 100.0%; height: 100.0%;">苏州 (Suzhou): 2 次</div>`)[0];
+                popup_3b8f8fc9ed98c25d0355e6ac3f16ca9c.setContent(html_5ad2badc442fa1c1835ceba89ba90992);
+            
+        
+
+        marker_8eda8f582e03b4b77058dbfdf46c0ea7.bindPopup(popup_3b8f8fc9ed98c25d0355e6ac3f16ca9c)
+        ;
+
+        
+    
+    
+            marker_8eda8f582e03b4b77058dbfdf46c0ea7.bindTooltip(
+                `<div>
+                     苏州 (Suzhou) (2 次)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05d6de2eaeb90ff54b96d7c3b3b539b2 = L.marker(
+                [36.6512, 117.1201],
+                {}
+            ).addTo(map_92d6d3f55d0d14a9ad3abaf78ff84c86);
+        
+    
+            var icon_c5c386294962a8a88a1dd73833a67da8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_05d6de2eaeb90ff54b96d7c3b3b539b2.setIcon(icon_c5c386294962a8a88a1dd73833a67da8);
+        
+    
+        var popup_25d84df71ffa6f965e536b5605324037 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2b75681fff08927aeb5137ad380a79b = $(`<div id="html_e2b75681fff08927aeb5137ad380a79b" style="width: 100.0%; height: 100.0%;">济南 (Jinan): 1 次</div>`)[0];
+                popup_25d84df71ffa6f965e536b5605324037.setContent(html_e2b75681fff08927aeb5137ad380a79b);
+            
+        
+
+        marker_05d6de2eaeb90ff54b96d7c3b3b539b2.bindPopup(popup_25d84df71ffa6f965e536b5605324037)
+        ;
+
+        
+    
+    
+            marker_05d6de2eaeb90ff54b96d7c3b3b539b2.bindTooltip(
+                `<div>
+                     济南 (Jinan) (1 次)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
