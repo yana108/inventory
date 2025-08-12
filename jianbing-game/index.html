@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>煎饼果子店 · Mini Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <h1>煎饼果子店</h1>
+      <div class="stats">
+        <span>金币：<strong id="coins">0</strong></span>
+        <span>评分：<strong id="rating">100</strong></span>
+        <button id="pauseBtn">暂停</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="board">
+        <canvas id="game" width="960" height="540"></canvas>
+      </section>
+      <aside class="sidebar">
+        <h2>配料台</h2>
+        <div id="ingredients" class="ingredients"></div>
+        <h2>订单</h2>
+        <ul id="orders" class="orders"></ul>
+        <button id="restartBtn" class="primary">重新开始</button>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>玩法：按订单在铁板上摊面糊→打蛋→抹酱→加配料→对折→打包。别糊了！</span>
+    </footer>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
