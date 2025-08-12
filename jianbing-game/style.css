@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: 'Noto Sans SC', system-ui, -apple-system, Segoe UI, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+body { background: #faf7f2; color: #2a2a2a; }
+
+#app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topbar h1 { margin: 0; font-size: 24px; }
+.topbar .stats { display: flex; align-items: center; gap: 16px; }
+.topbar button { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; background: #fff; cursor: pointer; }
+.topbar button:hover { background: #f3f3f3; }
+
+.main { display: grid; grid-template-columns: 1fr 320px; gap: 16px; margin-top: 12px; }
+.board { background: #f0e8dd; border: 2px solid #d4c7b7; border-radius: 12px; padding: 8px; position: relative; }
+.board canvas { width: 100%; height: auto; display: block; border-radius: 8px; background: linear-gradient(#2e2e2e, #1f1f1f); }
+
+.sidebar { background: #ffffff; border: 1px solid #eee; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.sidebar h2 { margin: 0; font-size: 18px; }
+
+.ingredients { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ingredient { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; border: 1px solid #eee; border-radius: 8px; background: #fcfbfa; cursor: grab; user-select: none; }
+.ingredient:hover { background: #f6f2ee; }
+.ingredient img { width: 24px; height: 24px; }
+
+.orders { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.order { border: 1px dashed #d8cfc4; border-radius: 8px; padding: 8px; background: #fff; }
+.order .items { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.badge { padding: 2px 6px; border-radius: 999px; background: #f0f0f0; border: 1px solid #e4e4e4; font-size: 12px; }
+
+.primary { padding: 10px 12px; border: none; border-radius: 8px; background: #2f7bff; color: #fff; cursor: pointer; }
+.primary:hover { filter: brightness(1.05); }
+
+.footer { margin-top: 12px; color: #6b5f50; font-size: 13px; }
+
+/* Toast */
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: 24px; background: #333; color: #fff; padding: 10px 14px; border-radius: 8px; opacity: 0; transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(-4px); }
