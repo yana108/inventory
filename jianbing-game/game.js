@@ -1,6 +1,11 @@
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 
+// Improve default text rendering
+ctx.font = '16px "Noto Sans SC", system-ui, sans-serif';
+ctx.textBaseline = 'middle';
+ctx.fillStyle = '#e9e0d3';
+
 const uiCoins = document.getElementById('coins');
 const uiRating = document.getElementById('rating');
 const pauseBtn = document.getElementById('pauseBtn');
@@ -176,6 +181,22 @@ function createNewCake(x, y) {
   };
 }
 
+function findNearestCake(x, y) {
+  let nearest = null;
+  let bestDist = Infinity;
+  for (const cake of griddleCakes) {
+    if (cake.packed) continue;
+    const dx = x - cake.x;
+    const dy = y - cake.y;
+    const d2 = dx * dx + dy * dy;
+    if (d2 < bestDist && Math.sqrt(d2) <= cake.radius * 1.2) {
+      bestDist = d2;
+      nearest = cake;
+    }
+  }
+  return nearest;
+}
+
 function tryPackNearestCake() {
   const cake = griddleCakes.find(c => !c.packed && c.folded);
   if (!cake) return;
@@ -256,7 +277,7 @@ function draw() {
   ctx.stroke();
   ctx.setLineDash([]);
   ctx.fillStyle = '#c9b8a2';
-  ctx.fillText('打包区', p.x + 20, p.y + 24);
+  ctx.fillText('打包区', p.x + 36, p.y + 20);
 
   // Cakes
   for (const cake of griddleCakes) {
@@ -264,13 +285,11 @@ function draw() {
   }
 
   // UI hints
-  ctx.fillStyle = '#fff';
-  ctx.globalAlpha = 0.1;
-  roundRect(ctx, g.x + 10, g.y + 10, 140, 30, 8);
+  ctx.fillStyle = 'rgba(255,255,255,0.08)';
+  roundRect(ctx, g.x + 10, g.y + 10, 220, 44, 8);
   ctx.fill();
-  ctx.globalAlpha = 1;
-  ctx.fillStyle = '#e9e0d3';
-  ctx.fillText('把配料拖到铁板', g.x + 22, g.y + 30);
+  ctx.fillStyle = '#f1e9dc';
+  ctx.fillText('从右侧拖“面糊”到铁板开始', g.x + 22, g.y + 28);
 }
 
 function drawCake(cake) {
